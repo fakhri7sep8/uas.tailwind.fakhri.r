@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog page</title>
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-df8">
+    <header>
+        <div class="absolute left-0 right-0 z-2 top-12">
+            <div class="flex justify-between md:items-center md:gap-36 gap-16 w-[90%] m-auto flex-wrap " id="topHeader">
+                <img src="assets/img/footer-logo.png" alt="">
+                <div class="md:hidden block" onclick="showHideMenu()">
+                    <i class="bx bx-menu text-4xl text-white"></i>
+                </div>
+                <div id="menu"
+                    class=" hidden md:flex flex-col md:flex-row grow justify-between md:items-center  gap-7 ">
+                    <nav>
+                        <ul class="flex flex-col md:flex-row gap-6 md:gap-9 capitalize">
+                            <li><a href="" class="text-base font-medium text-white hover:text-df5 transition-all duration-200">home</a></li>
+                            <li><a href="" class="text-base font-medium text-white hover:text-df5 transition-all duration-200">hosting</a></li>
+                            <li>
+                                <a href="#" class="text-white hover:text-df5 transition-all duration-200 text-base font-medium">pages</a>
+                                <ul class="absolute top-full  w-[20%] bg-df7 shadow-md hidden group-hover:block z-1">
+                                    <li id="about-item" class="py-2 px-4"><a href="#" class="text-base font-medium text-white hover:text-df5 transition-all duration-200">About</a></li>
+                                    <li id="faq-item" class="py-2 px-4"><a href="#" class="text-base font-medium text-white hover:text-df5 transition-all duration-200">Faq</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="text-base font-medium text-white hover:text-df5 transition-all duration-200">news</a></li>
+                            <li><a href="" class="text-base font-medium text-white hover:text-df5 transition-all duration-200">contact</a></li>
+                        </ul>
+                    </nav>
+                    <button
+                        class="bg-df5  hover:ring hover:ring-sky-600 rounded-full transition-all font-bold text-white py-2 px-6 duration-200 shadow-md w-44 h-14 flex items-center justify-center">sign
+                        up
+                    </button>
+                </div>
+            </div>
+            <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top"
+            class=" justify-center items-center hidden fixed bottom-5 right-5 z-50 p-3 bg-df5 text-white rounded-full shadow-lg hover:bg-df9 transition-all duration-200 w-14 h-14">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        </div>
+    </header>
+    <main class="text-df8">
+        <section id="jumbotron" class="bg-bg5 bg-cover bg-repeat md:min-h-screen bg-center w-full px-8 pt-48  ">
+            <div class="flex flex-col justify-center items-center w-full gap-7 pb-24">
+                <div class="flex flex-col text-center gap-8 justify-center items-center">
+                    <h1 class="text-white font-semibold md:text-7xl text-4xl ">Blog Page</h1>
+                    <p class="text-white font-medium md:text-lg text-base">BLOG <span class="text-df19">/ PAGE</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="mt-12 w-full justify-center items-center flex">
+            <div class="w-[95%] md:flex-row  flex-col-reverse flex md:justify-between justify-center items-center">
+                <div class="md:w-[60%] w-full flex flex-col gap-8">
+                    <div class=" gap-16 flex flex-col pb-8 bg-white">
+                        <img src="assets/img/b1.webp" alt="">
+                        <div class="flex-col flex  gap-10 pl-8">
+                            <p class="text-black font-bold text-3xl ">But there is a downside. Simply running a search
+                                for medical blogs.</p>
+                            <p class="text-df7 w-[95%] text-sm">Theres a good chance Everyday Health is the most
+                                appropriately named blog on this list because it focuses on the health topics that
+                                consistently affect a wide range of people. They also get kudos for addressing the
+                                emotional challenges folks face when managing conditions.</p>
+                            <button
+                                class="bg-df24  hover:ring hover:ring-sky-600 rounded-full transition-all font-bold text-white py-2 px-6 duration-200 shadow-md w-44 h-14 text-sm">Read
+                                more</button>
+                        </div>
+                    </div>
+                    <div class=" gap-16 flex flex-col pb-8 bg-white">
+                        <img src="assets/img/b2.webp" alt="">
+                        <div class="flex-col flex  gap-10 pl-8">
+                            <p class="text-black font-bold text-3xl ">When Do We Need A Design System? An Interview With
+                                Brad Frost.</p>
+                            <p class="text-df7 w-[95%] text-sm">Theres a good chance Everyday Health is the most
+                                appropriately named blog on this list because it focuses on the health topics that
+                                consistently affect a wide range of people. They also get kudos for addressing the
+                                emotional challenges folks face when managing conditions.</p>
+                            <button
+                                class="bg-df24  hover:ring hover:ring-sky-600 rounded-full transition-all font-bold text-white py-2 px-6 duration-200 shadow-md w-44 h-14 text-sm">Read
+                                more</button>
+                        </div>
+                    </div>
+                    <div class="gap-16 flex flex-col pb-8 bg-white">
+                        <img src="assets/img/b3.webp" alt="">
+                        <div class="flex-col flex  gap-10 pl-8">
+                            <p class="text-black font-bold text-3xl ">Exploring The Latest Web Design Trends Together
+                                With Be Theme?.</p>
+                            <p class="text-df7 w-[95%] text-sm">Theres a good chance Everyday Health is the most
+                                appropriately named blog on this list because it focuses on the health topics that
+                                consistently affect a wide range of people. They also get kudos for addressing the
+                                emotional challenges folks face when managing conditions.</p>
+                            <button
+                                class="bg-df24  hover:ring hover:ring-sky-600 rounded-full transition-all font-bold text-white py-2 px-6 duration-200 shadow-md w-44 h-14 text-sm">Read
+                                more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-[38%] w-full min-h-screen  flex flex-col gap-8">
+                    <div class="bg-white flex flex-col items-center justify-center">
+                        <div class="flex flex-col w-[85%] my-9 gap-4">
+                            <p class="font-bold text-xl text-black">Search Objects</p>
+                            <div class="flex flex-row">
+                                <input type="text" placeholder="search your keyword"
+                                    class="border-2 border-df6  bg-df8 pl-4 w-72">
+                                <button
+                                    class="bg-df5  hover:ring hover:ring-sky-600  transition-all font-bold text-white  duration-200 shadow-md w-20 h-14">sign</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white flex flex-col items-center justify-center">
+                        <div class="flex flex-col w-[85%] my-9 gap-6 ">
+                            <p class="font-bold text-2xl text-black">About Me</p>
+                            <div class="flex flex-col justify-center items-center gap-4">
+                                <img src="assets/img/me.webp" alt="fakhri" class="rounded-full w-[40%]">
+                                <p class="text-xl font-bold text-black">Jamil Rayhan</p>
+                                <p class="text-base  w-[90%] text-center text-df7">I'am React js Develoeper, ipsum dolor
+                                    sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white flex flex-col items-center justify-center">
+                        <div class="flex flex-col w-[85%] my-9 gap-6 ">
+                            <p class="font-bold text-xl text-black">Popular Feeds</p>
+                            <div class="flex flex-row gap-10 border-b-df7 border-b-2 pb-6">
+                                <img src="assets/img/b1.webp" alt="" class="rounded-full w-24 h-24">
+                                <div class="flex flex-col gap-6">
+                                    <p class="font-semibold text-xl text-black">Give Us Pics, Video To Support #MeToo
+                                        Allegations: Cops To Wrestlers</p>
+                                    <p class="font-medium text-lg text-df7">October 18, 2023</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row gap-10 border-b-df7 border-b-2 pb-6">
+                                <img src="assets/img/b2.webp" alt="" class="rounded-full w-24 h-24">
+                                <div class="flex flex-col gap-6">
+                                    <p class="font-semibold text-xl text-black">British Soldiers Faint In Front Of
+                                        Prince William Amid The Scorching London Heat</p>
+                                    <p class="font-medium text-lg text-df7">October 18, 2023</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row gap-10 border-b-df7 border-b-2 pb-6">
+                                <img src="assets/img/b3.webp" alt="" class="rounded-full w-24 h-24">
+                                <div class="flex flex-col gap-6">
+                                    <p class="font-semibold text-xl text-black">British Soldiers Faint In Front Of
+                                        Prince William Amid The Scorching London Heat</p>
+                                    <p class="font-medium text-lg text-df7">October 18, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white flex justify-center items-center py-4">
+                        <div class="w-[85%] flex flex-col gap-4">
+                            <p class="text-black font-bold text-xl">Social Profile</p>
+                            <div class="flex flex-row gap-14">
+                                <div
+                                    class="bg-df23 w-10 h-10 flex justify-center items-center hover:ring hover:ring-sky-600 duration-200 transition-all ">
+                                    <i class="fa-brands fa-facebook-f text-xl text-white rounded-lg"></i>
+                                </div>
+                                <div
+                                    class="bg-df23 w-10 h-10 flex justify-center items-center hover:ring hover:ring-sky-600 duration-200 transition-all ">
+                                    <i class="fa-brands fa-youtube text-xl text-white rounded-lg"></i>
+                                </div>
+                                <div
+                                    class="bg-df23 w-10 h-10 flex justify-center items-center hover:ring hover:ring-sky-600 duration-200 transition-all ">
+                                    <i class="fa-brands fa-instagram text-2xl text-white rounded-lg"></i>
+                                </div>
+                                <div
+                                    class="bg-df23 w-10 h-10 flex justify-center items-center hover:ring hover:ring-sky-600 duration-200 transition-all ">
+                                    <i class="fa-brands fa-whatsapp text-2xl text-white rounded-lg"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white flex justify-center items-center py-7">
+                        <div class="w-[85%] flex flex-col gap-7">
+                            <p class="text-xl font-bold text-black">Instagram Feeds</p>
+                            <div class="flex flex-col gap-4">
+                                <div class="flex flex-row gap-4 justify-center items-center">
+                                    <img src="assets/img/ins1.webp" alt="" class="w-[30%]">
+                                    <img src="assets/img/ins2.webp" alt="" class="w-[30%]">
+                                    <img src="assets/img/ins3.webp" alt="" class="w-[30%]">
+                                </div>
+                                <div class="flex flex-row gap-4 justify-center items-center">
+                                    <img src="assets/img/ins4.webp" alt="" class="w-[30%]">
+                                    <img src="assets/img/ins5.webp" alt="" class="w-[30%]">
+                                    <img src="assets/img/ins1.webp" alt="" class="w-[30%]">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white flex justify-center items-center py-7">
+                        <div class="w-[85%] flex flex-col gap-3">
+                            <p class="text-xl font-bold text-black">Instagram Feeds</p>
+                            <div class="flex flex-row gap-5">
+                                <div class="bg-df7 py-3 px-3 rounded-lg items-center justify-center"><p>popular</p></div>
+                                <div class="bg-df7 py-3 px-3 rounded-lg items-center justify-center"><p>design</p></div>
+                            </div>
+                            <div class="flex flex-row gap-5">
+                                <div class="bg-df7 py-3 px-3 rounded-lg items-center justify-center"><p>usabilyti</p></div>
+                                <div class="bg-df7 py-3 px-3 rounded-lg items-center justify-center"><p>develop</p></div>
+                            </div>
+                            <div class="flex flex-row gap-5">
+                                <div class="bg-df7 py-3 px-3 rounded-lg items-center justify-center"><p>consult</p></div>
+                                <div class="bg-df7 py-3 px-2 rounded-lg items-center justify-center"><p>icon</p></div>
+                            </div>
+                            <div class="flex flex-row gap-5">
+                                <div class="bg-df7 py-3 px-2 rounded-lg items-center justify-center"><p>html</p></div>
+                                <div class="bg-df7 py-3 px-2 rounded-lg items-center justify-center"><p>ux</p></div>
+                            </div>
+                            <div class="flex flex-row gap-5">
+                                <div class="bg-df7 py-3 px-3 rounded-lg items-center justify-center"><p>busines</p></div>
+                                <div class="bg-df7 py-3 px-2 rounded-lg items-center justify-center"><p>kit</p></div>
+                            </div>
+                            <div class="flex flex-row gap-5">
+                                <div class="bg-df7 py-3 px-3 items-start justify-center rounded-lg"><p>keyboard</p></div>
+                                <div class="bg-df7  py-3 px-2 rounded-lg items-center justify-center"><p>tech</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="flex flex-col justify-center items-center pt-16">
+            <div class="pt-10 flex  justify-center">
+                <img src="assets/img/line.png" alt="">
+            </div>
+            <div class="flex flex-row md:gap-28 gap-5 md:pt-24 pt-10 items-center justify-center">
+                <img src="assets/img/safeguard.webp" alt="" class="md:w-36 w-[15%]">
+                <img src="assets/img/jimdo.webp" alt="" class="md:w-36 w-[15%]">
+                <img src="assets/img/intera.webp" alt="" class="md:w-36 w-[15%]">
+                <img src="assets/img/ebaa.webp" alt="" class="md:w-36 w-[15%]">
+                <img src="assets/img/fanvil.webp" alt="" class="md:w-36 w-[15%]">
+            </div>
+        </section>
+        <section class="bg-bg4 bg-cover h-[161rem] md:h-full  w-full md:mt-20 mt-14 pb-48 flex flex-col items-center ">
+            <div>
+                <div class="flex md:flex-row flex-col justify-between md:gap-32 gap-10 items-center pr-[20px] pl-[29px] pt-28">
+                    <div class="flex flex-col gap-4 md:items-start md:justify-start items-center justify-center">
+                        <p class="text-df13 font-semibold text-xl">Get an easy quote</p>
+                        <h2 class="text-4xl text-white font-semibold text-center md:text-start">Sign Up For Web Hosting Today!</h2>
+                    </div>
+                    <div class="flex flex-col gap-4 items-center justify-center md:items-start md:justify-start">
+                        <p class="text-df14 text-lg">Starting At Only</p>
+                        <p class="text-white font-semibold"><span class="text-4xl">$2.75</span>/mo*</p>
+                    </div>
+                    <div>
+                        <button
+                            class="text-white font-semibold text-sm rounded-full w-48 h-14 bg-df5 hover:bg-transparent transition-all duration-200  border-df4 hover:border-df4 border-2 border-solid">Get
+                            started Now</button>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center pt-16">
+                    <div class="border-df15 border-[1px] border-solid w-[95%]"></div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="w-[95%]  h-80  mt-14 md:flex-row flex gap-40 flex-col items-center ">
+                        <div class="w-[21rem] h-[29rem] bg-df16 justify-center items-center flex flex-col pt-9 mt-28">
+                            <div class="w-[81%] h-[80%]  ">
+                                <div class="flex flex-col gap-7">
+                                    <img src="assets/img/logo.webp" alt="" class="w-[75%] h-[75%]">
+                                    <p class="text-df17 text-sm">Dolor sit amet, consectetur adipisicing elit, sed do
+                                        eiusmod tempor incididunt Lorem ipsum ut labore et dolore magna.</p>
+                                    <ul class="gap-4 flex flex-col">
+                                        <li class="text-df7 flex gap-3 items-center">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <p class="text-sm">12/A, Hamilton City Way, Newyork, US</p>
+                                        </li>
+                                        <li class="text-df7 flex gap-3 items-center">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <p class="text-sm">info@exampleweb.com</p>
+                                        </li>
+                                        <li class="text-df7 flex gap-3 items-center">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <p class="text-sm">+8987 5675 754 6</p>
+                                        </li>
+                                        <li class="text-df7 flex gap-3 items-center">
+                                            <i class="fa-solid fa-globe"></i>
+                                            <p class="text-sm"> www.webexample.com</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="w-[21rem] h-20 md:h-16 bg-df10 flex items-center justify-center mt-20">
+                                <ul class="w-[70%] flex flex-row gap-8 items-center justify-center">
+                                    <li class="text-white">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </li>
+                                    <li class="text-white">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </li>
+                                    <li class="text-white">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </li>
+                                    <li class="text-white">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex flex-col mt-28">
+                            <div class="flex md:flex-row flex-col  gap-24 pt-10 items-start md:items-center justify-center ml-10">
+                                <div class="flex flex-col gap-4">
+                                    <h3 class="font-semibold text-white text-2xl">Our Products</h3>
+                                    <ul class="flex flex-col gap-3">
+                                        <li class="text-df7">Shared</li>
+                                        <li class="text-df7">Hosting</li>
+                                        <li class="text-df7">WordPrees</li>
+                                        <li class="text-df7">VPS</li>
+                                        <li class="text-df7">Dedicate</li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <h3 class="font-semibold text-white text-2xl">Get Links</h3>
+                                    <ul class="flex flex-col gap-3">
+                                        <li class="text-df7">About</li>
+                                        <li class="text-df7">Faq</li>
+                                        <li class="text-df7">News</li>
+                                        <li class="text-df7">News Details</li>
+                                        <li class="text-df7">Contact</li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <h3 class="font-semibold text-white text-2xl">Our Company</h3>
+                                    <ul class="flex flex-col gap-3">
+                                        <li class="text-df7">Chat</li>
+                                        <li class="text-df7">Ticets</li>
+                                        <li class="text-df7">Base</li>
+                                        <li class="text-df7">system</li>
+                                        <li class="text-df7">marketing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="w-full flex items-center justify-center flex-col">
+                                <div class="w-[60%] pt-12">
+                                    <p class="text-white text-sm ">The promotional price is for the first term only and
+                                        renews.30-Day Money-Back Guarantee does not extend to domain names.</p>
+                                </div>
+                                <div>
+                                    <button
+                                        class=" rounded-full w-52 h-16 bg-df18  mt-10 hover:bg-transparent transition-all duration-200 text-white border-df4 border-solid border-2 flex flex-row justify-center items-center gap-4">
+                                        <i class="fa-solid fa-users"></i>
+                                        <p>Reffer A Friend</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        var xStatus = false;
+
+        function showHideMenu() {
+            if (!xStatus) {
+                document.getElementById('menu').classList.remove("hidden");
+                document.getElementById('menu').classList.add("flex");
+                console.log(document.documentElement.scrollTop);
+                if (window.matchMedia("(max-width: 768px)").matches) {
+                    console.log("jalan");
+                    document.querySelector('#menu nav ul').classList.add("bg-df9");
+                    document.querySelectorAll('#menu nav ul li').forEach(li => li.classList.add("bg-df9", "border-b"));
+                    document.querySelector('#menu').classList.add("bg-df9");
+                }
+
+                xStatus = true;
+            } else {
+                xStatus = false;
+                document.getElementById('menu').classList.add("hidden");
+                document.getElementById('menu').classList.remove("flex");
+                if (window.matchMedia("(max-width: 768px)").matches) {
+                    // hanya hapus kelas jika kita masih dalam mode mobile
+                    document.querySelector('#menu nav ul').classList.remove("bg-df9");
+                    document.querySelectorAll('#menu nav ul li').forEach(li => li.classList.remove("bg-df9", "border-b"));
+                    document.querySelector('#menu').classList.remove("bg-df9");
+                } else {
+                    // jika kita dalam mode laptop, jangan hapus kelas
+                    console.log("mode laptop, jangan hapus kelas");
+                }
+            }
+        }
+
+        // Get the button
+        let mybutton = document.getElementById("scrollToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+
+        const pagesMenuItem = document.querySelector('#menu nav ul li:nth-child(3)');
+        const aboutItem = document.querySelector('#about-item');
+        const faqItem = document.querySelector('#faq-item');
+
+        pagesMenuItem.addEventListener('click', function () {
+            const submenu = pagesMenuItem.querySelector('ul');
+            submenu.classList.toggle('hidden');
+            aboutItem.classList.toggle('border-b-4');
+            faqItem.classList.toggle('border-b-4');
+        });
+    </script>
+
+</body>
+</html>
