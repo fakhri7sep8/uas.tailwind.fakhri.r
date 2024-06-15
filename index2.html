@@ -73,13 +73,20 @@
         </section>
         <section class="mt-14 flex gap-6 flex-col">
             <div class="flex gap-4 flex-col items-center justify-center">
-                <div class="flex gap-4 flex-col">
+                <div class="flex flex-col gap-4">
                     <div class="flex items-center justify-center mt-14">
                         <h1 class="font-bold text-xl">Select plans</h1>
                     </div>
-                    <div class="flex items-center justify-center gap-4 ">
+                    <div class="flex items-center justify-center gap-4 relative">
                         <p class="text-base">Monthly</p>
-                        <div class="bg-df7 rounded-full h-6 w-16 "></div>
+                        <div class="absolute inset-y-0 left-0 w-1 bg-orange-500 rounded-full" id="slider"></div>
+                        <button
+                            class="flex items-center text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            id="toggle">
+                            <span
+                                class="h-4 w-4 rounded-full border border-orange-500 bg-white shadow transform ring-0 transition-transform duration-200 ease-in"
+                                id="bullet"></span>
+                        </button>
                         <p class="text-base">Yearly</p>
                     </div>
                 </div>
@@ -726,8 +733,23 @@
 
         // Call the function once to set the initial state
         checkScreenWidth();
-    </script>
 
+
+        const toggleButton = document.getElementById('toggle');
+        const bullet = document.getElementById('bullet');
+        const slider = document.getElementById('slider');
+
+        toggleButton.addEventListener('click', () => {
+            bullet.classList.toggle('right-0');
+            bullet.classList.toggle('left-0');
+            slider.classList.toggle('right-0');
+            slider.classList.toggle('left-0');
+            isYearly = !isYearly;
+            updatePrices();
+        });
+
+
+    </script>
 </body>
 
 </html>
