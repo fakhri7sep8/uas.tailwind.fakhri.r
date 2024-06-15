@@ -50,7 +50,7 @@
 
             </div>
             <button
-                class="bg-df5  hover:ring hover:ring-sky-600 rounded-full transition-all font-bold text-white py-2 px-6 duration-200 shadow-md w-44 h-14 flex items-center justify-center">sign
+                class="bg-df5  hover:ring hover:ring-sky-600 rounded-full transition-all font-bold text-white py-2 px-6 duration-200 shadow-md w-44 h-14 flex items-center justify-center " id="my-button">sign
                 up
             </button>
         </div>
@@ -504,6 +504,21 @@
             aboutItem.classList.toggle('border-b-4');
             faqItem.classList.toggle('border-b-4');
         });
+
+        const myButton = document.getElementById('my-button');
+
+        function checkScreenWidth() {
+            if (window.innerWidth <= 768) {
+                myButton.style.display = 'none';
+            } else {
+                myButton.style.display = 'block';
+            }
+        }
+
+        window.addEventListener('resize', checkScreenWidth);
+
+        // Call the function once to set the initial state
+        checkScreenWidth();
     </script>
 
 </body>

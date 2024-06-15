@@ -1751,6 +1751,10 @@ video {
   gap: 6.8rem;
 }
 
+.gap-\[95px\] {
+  gap: 95px;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -3476,8 +3480,8 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:left-\[50rem\] {
-    left: 50rem;
+  .md\:left-\[53rem\] {
+    left: 53rem;
   }
 
   .md\:right-72 {
@@ -3654,6 +3658,10 @@ video {
 
   .md\:gap-32 {
     gap: 8rem;
+  }
+
+  .md\:gap-6 {
+    gap: 1.5rem;
   }
 
   .md\:gap-9 {
