@@ -654,10 +654,6 @@ video {
   bottom: 0px;
 }
 
-.bottom-4 {
-  bottom: 1rem;
-}
-
 .bottom-5 {
   bottom: 1.25rem;
 }
@@ -668,10 +664,6 @@ video {
 
 .left-0 {
   left: 0px;
-}
-
-.left-4 {
-  left: 1rem;
 }
 
 .left-\[16rem\] {
@@ -2332,11 +2324,6 @@ video {
   background-color: rgb(240 125 52 / var(--tw-bg-opacity));
 }
 
-.bg-df2 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(57 66 100 / var(--tw-bg-opacity));
-}
-
 .bg-df20 {
   --tw-bg-opacity: 1;
   background-color: rgb(242 242 242 / var(--tw-bg-opacity));
@@ -3290,11 +3277,6 @@ video {
   --tw-ring-inset: inset;
 }
 
-.ring-gray-200 {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity));
-}
-
 .blur {
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -3558,16 +3540,6 @@ video {
 
 .hover\:focus\:text-center:focus:hover {
   text-align: center;
-}
-
-:is(.dark .dark\:bg-f4) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(225 244 255 / var(--tw-bg-opacity));
-}
-
-:is(.dark .dark\:bg-df1) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 43 66 / var(--tw-bg-opacity));
 }
 
 :is(.dark .dark\:bg-dbg1) {
