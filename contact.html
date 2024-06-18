@@ -71,27 +71,20 @@
             </div>
         </section>
         <section class="w-full min-h-screen bg-dbg6">
-            <div class="w-full flex justify-center items-center py-16 min-h-screen ">
-                <div class="w-[90%] flex md:flex-row flex-col-reverse md:gap-0 gap-20 justify-between ">
+            <div class="w-full flex justify-center items-center py-16 min-h-screen">
+                <div class="w-[90%] flex md:flex-row flex-col-reverse md:gap-0 gap-20 justify-between">
                     <div class="flex flex-col gap-4 md:w-[50%] w-full h-full">
                         <div class="flex-col flex gap-6">
-                            <input type="text" placeholder="Type Your Search"
-                                class="border-2 border-df6 rounded-xl font-medium   w-full  h-full  px-14 md:py-6 py-5 hover:border-df6">
-                            <input type="text" placeholder="Type Your Search"
-                                class="border-2 border-df6 rounded-xl font-medium   w-full  h-full  px-14 md:py-6 py-5 hover:border-df6">
-                            <input type="text" placeholder="Type Your Search"
-                                class="border-2 border-df6 rounded-xl font-medium   w-full  h-full  px-14 md:py-6 py-5 hover:border-df6">
-                            <textarea name="" id=""
-                                class="border-2 border-df6 rounded-xl font-medium h-48  w-full pl-5 pt-4"
-                                placeholder="YOUR MESSAGE"></textarea>
+                            <input type="text" id="search1" placeholder="Type Your Search" class="border-2 border-df6 rounded-xl font-medium w-full h-full px-14 md:py-6 py-5 hover:border-df6">
+                            <input type="text" id="search2" placeholder="Type Your Search" class="border-2 border-df6 rounded-xl font-medium w-full h-full px-14 md:py-6 py-5 hover:border-df6">
+                            <input type="text" id="search3" placeholder="Type Your Search" class="border-2 border-df6 rounded-xl font-medium w-full h-full px-14 md:py-6 py-5 hover:border-df6">
+                            <textarea id="message" class="border-2 border-df6 rounded-xl font-medium h-48 w-full pl-5 pt-4" placeholder="YOUR MESSAGE"></textarea>
                         </div>
                         <div>
-                            <button
-                                class="rounded-full text-white bg-df5  w-32 h-12  hover:bg-transparent border-df4 transition-all duration-200 border-2 hover:text-df5 font-semibold  md:text-lg text-sm">Submit
-                                form</button>
+                            <button onclick="validateForm()" class="rounded-full text-white bg-df5 w-32 h-12 hover:bg-transparent border-df4 transition-all duration-200 border-2 hover:text-df5 font-semibold md:text-lg text-sm">Submit form</button>
                         </div>
                     </div>
-                    <div class="flex-col flex md:w-[40%] w-full gap-9 ">
+                    <div class="flex-col flex md:w-[40%] w-full gap-9">
                         <div class="bg-df5 w-full h-[50%] text-white gap-5 pl-4 py-8 flex flex-col">
                             <p>US Office</p>
                             <div class="flex flex-col gap-3">
@@ -106,8 +99,8 @@
                             <div class="flex flex-col gap-3">
                                 <p>100 Mainstreet Center, Sydney</p>
                                 <p>+61 333 9296</p>
-                                <p> contact@example.com</p>
-                                <p> Download Brochure</p>
+                                <p>contact@example.com</p>
+                                <p>Download Brochure</p>
                             </div>
                         </div>
                     </div>
@@ -321,6 +314,34 @@
 
         // Call the function once to set the initial state
         checkScreenWidth();
+
+
+        function validateForm() {
+                const inputs = [
+                    { id: 'search1', placeholder: 'Type Your Search' },
+                    { id: 'search2', placeholder: 'Type Your Search' },
+                    { id: 'search3', placeholder: 'Type Your Search' },
+                    { id: 'message', placeholder: 'YOUR MESSAGE' }
+                ];
+        
+                let valid = true;
+        
+                inputs.forEach(input => {
+                    const element = document.getElementById(input.id);
+                    if (!element.value) {
+                        element.style.borderColor = 'red';
+                        element.placeholder = 'This field is required.';
+                        valid = false;
+                    } else {
+                        element.style.borderColor = '';
+                        element.placeholder = input.placeholder;
+                    }
+                });
+        
+                if (valid) {
+                    alert('Form submitted successfully!');
+                }
+            }
     </script>
 
 </body>

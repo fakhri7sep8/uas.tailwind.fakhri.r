@@ -70,28 +70,24 @@
                 </div>
             </div>
         </section>
-        <section class="mt-20 w-full min-h-screen flex justify-center ">
-            <div class="md:w-[80%] w-[90%] h-[80%] border-df4 border-2 flex  flex-col gap-24 pb-20">
-                <div class="w-full h-full  flex justify-center items-center">
+        <section class="mt-20 w-full min-h-screen flex justify-center">
+            <div class="md:w-[80%] w-[90%] h-[80%] border-df4 border-2 flex flex-col gap-24 pb-20">
+                <div class="w-full h-full flex justify-center items-center">
                     <p class="font-semibold text-3xl mt-24">Login</p>
                 </div>
-                <div class="flex flex-col gap-10 ">
+                <div class="flex flex-col gap-10">
                     <div class="flex flex-col gap-4 items-center">
-                        <p class="font-medium text-lg  w-[80%] items-start flex">Email address <span
-                                class="text-df24">**</span></p>
-                        <input type="email" name="email" id="email" placeholder="Enter username  or Email address..."
-                            class="border-df4 border-2 py-5 w-[80%] text-df4 pl-6">
+                        <p class="font-medium text-lg w-[80%] items-start flex">Email address <span class="text-df24">**</span></p>
+                        <input type="email" name="email" id="email" placeholder="Enter username or Email address..." class="border-df4 border-2 py-5 w-[80%] text-df4 pl-6">
                     </div>
                     <div class="flex flex-col gap-4 items-center">
-                        <p class="font-medium text-lg w-[80%] items-start flex">Password <span
-                                class="text-df24">**</span></p>
-                        <input type="email" name="email" id="email" placeholder="Enter your Password"
-                            class="border-df4 border-2 py-5 w-[80%] text-df4 pl-6 ">
+                        <p class="font-medium text-lg w-[80%] items-start flex">Password <span class="text-df24">**</span></p>
+                        <input type="password" name="password" id="password" placeholder="Enter your Password" class="border-df4 border-2 py-5 w-[80%] text-df4 pl-6">
                     </div>
                     <div class="flex items-center justify-center">
                         <div class="w-[80%] flex flex-row md:justify-between md:gap-0 gap-[95px]">
                             <div class="flex-row flex gap-4">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="remember" id="remember">
                                 <p class="font-medium">Remember me!</p>
                             </div>
                             <div>
@@ -100,17 +96,13 @@
                         </div>
                     </div>
                     <div class="flex flex-col items-center justify-center gap-5">
-                        <button
-                            class=" rounded-full  md:h-16 w-[80%] h-12 bg-df5 hover:text-black hover:bg-transparent border-df4 border-2 transition-all duration-200 text-white font-semibold md:text-lg text-sm">Login
-                            Now</button>
+                        <button onclick="validateForm('login')" class="rounded-full md:h-16 w-[80%] h-12 bg-df5 hover:text-black hover:bg-transparent border-df4 border-2 transition-all duration-200 text-white font-semibold md:text-lg text-sm">Login Now</button>
                         <div class="flex-row flex w-full justify-center items-center gap-6">
                             <div class="border-df19 border-[1px] border-solid w-[35%] h-0"></div>
                             <p>Or</p>
                             <div class="border-df19 border-[1px] border-solid w-[35%] h-0"></div>
                         </div>
-                        <button
-                            class=" rounded-full w-[80%] md:h-16  h-12 bg-df5 hover:text-black hover:bg-transparent border-df4 border-2 transition-all duration-200 text-white font-semibold md:text-lg text-sm">Sign
-                            Up Now</button>
+                        <button onclick="validateForm('signup')" class="rounded-full w-[80%] md:h-16 h-12 bg-df5 hover:text-black hover:bg-transparent border-df4 border-2 transition-all duration-200 text-white font-semibold md:text-lg text-sm">Sign Up Now</button>
                     </div>
                 </div>
             </div>
@@ -326,6 +318,40 @@
 
         // Call the function once to set the initial state
         checkScreenWidth();
+
+        function validateForm(action) {
+                const emailInput = document.getElementById('email');
+                const passwordInput = document.getElementById('password');
+                let valid = true;
+        
+                if (!emailInput.value) {
+                    emailInput.classList.add('border-red-500');
+                    emailInput.placeholder = 'Please enter a valid email address.';
+                    valid = false;
+                } else {
+                    emailInput.classList.remove('border-red-500');
+                    emailInput.placeholder = 'Enter username or Email address...';
+                }
+        
+                if (!passwordInput.value) {
+                    passwordInput.classList.add('border-red-500');
+                    passwordInput.placeholder = 'Please enter your password.';
+                    valid = false;
+                } else {
+                    passwordInput.classList.remove('border-red-500');
+                    passwordInput.placeholder = 'Enter your Password';
+                }
+        
+                if (valid) {
+                    if (action === 'login') {
+                        alert('Logging in...');
+                        // Implement your login logic here
+                    } else if (action === 'signup') {
+                        alert('Signing up...');
+                        // Implement your sign-up logic here
+                    }
+                }
+            }
     </script>
 
 </body>
